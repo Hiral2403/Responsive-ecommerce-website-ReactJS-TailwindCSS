@@ -1,0 +1,10 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* @layer components {
+    .search-bar{
+        @apply w-0 group-hover:w-[300px];
+    }
+} */
