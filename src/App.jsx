@@ -8,6 +8,7 @@ import Category2 from "./components/Category/Category2";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Products from "./components/Products/Products";
+import ProductDetails from "./components/Products/ProductDetails";
 import Blogs from "./components/Blogs/Blogs";
 import Partners from "./components/Partners/Partners";
 import Footer from "./components/Footer/Footer";
@@ -19,6 +20,21 @@ import headphone from "./assets/hero/headphone.png";
 import smartwatch2 from "./assets/category/smartwatch2-removebg-preview.png";
 import About from "./components/pages/About";
 import Blog from "./components/pages/Blog";
+
+import Img1 from "./assets/product/p-1.jpg"
+import Img2 from "./assets/product/p-2.jpg"
+import Img3 from "./assets/product/p-3.jpg"
+import Img4 from "./assets/product/p-4.jpg"
+import Img5 from "./assets/product/p-5.jpg";
+import Img6 from "./assets/product/p-7.jpg";
+const products = [
+  { id: 1, title: "Boat Headphone", img: Img1, price: 120, description: "High-quality sound." },
+  { id: 2, title: "Rocky Mountain", img: Img2, price: 420, description: "Durable and stylish." },
+  { id: 3, title: "Goggles", img: Img3, price: 320, description: "Protective eyewear." },
+  { id: 4, title: "Headphone", img: Img4, price: 320, description: "Protective eyewear." },
+  { id: 5, title: "Goggles", img: Img5, price: 320, description: "Protective eyewear." },
+  { id: 6, title: "Headphone", img: Img6, price: 320, description: "Protective eyewear." },
+]; 
 
 const BannerData = {
   discount: "30% OFF",
@@ -85,6 +101,7 @@ const App = () => {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/product/:id" element={<ProductDetails products={products} />} />
         </Routes>
 
         <Footer />

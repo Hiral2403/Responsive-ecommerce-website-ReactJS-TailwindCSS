@@ -1,5 +1,6 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import p1 from "../../assets/product/p-1.jpg";
 import p2 from "../../assets/product/p-2.jpg";
 import p3 from "../../assets/product/p-3.jpg";
@@ -28,6 +29,7 @@ const Shop = () => {
             key={product.id}
             className="bg-white shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center"
           >
+          <Link to={`/product/${product.id}`} className="w-full flex flex-col items-center">
             <div className="relative w-48 h-48 overflow-hidden rounded-md">
               <img
                 src={product.image}
@@ -38,11 +40,14 @@ const Shop = () => {
             <h2 className="text-2xl font-semibold mt-4 text-gray-900 text-center">
               {product.name}
             </h2>
+          </Link>
             <p className="text-gray-600 text-lg text-center">{product.price}</p>
             <div className="mt-4">
+            <Link to={`/product/${product.id}`} className="w-full flex flex-col items-center">
               <button className="flex items-center justify-between gap-2 bg-red-500 text-white px-6 py-2 rounded-full text-lg font-semibold uppercase transition duration-300 hover:bg-red-600 hover:scale-105">
                 Add to Cart <FaShoppingCart className="text-lg" />
               </button>
+              </Link>
             </div>
           </div>
         ))}
